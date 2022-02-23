@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+            display: inline-block;
+            width: 80px;
+            padding: 5px;
+        }
+        button{
+            margin-left: 95px;
+        }
+    </style>
+</head>
+<body>
+   <form action="#" method="get">
+    <div>
+        <label for="uname">User Name</label>
+        <input required name="username" id="uname"/>
+    </div>
+    <div>
+        <label for="uage">User Age</label>
+        <input type="number" min="18" max="80" required name="userage" id="uage"/>
+    </div>
+    <div>
+        <label for="umail">User eMail</label>
+        <input pattern=".*@.*" required name="usermail" id="umail"/>
+    </div>
+    <div>
+        <label for="uphone">User Phone</label>
+        <input title="####-###-###" placeholder="####-###-###" pattern="\d{4}-\d{3}-\d{3}" type="tel" required name="userphone" id="uphone"/>
+    </div>
+    <button> Submit </button>
+   </form>
+</body>
+</html>
+
+<!-- [a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4} -->
