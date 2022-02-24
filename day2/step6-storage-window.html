@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        addEventListener("load", init);
+        function init(){
+            document
+            .getElementsByTagName("button")[0]
+            .addEventListener("click", clickHandler);
+            //------------------------------------------
+            document
+            .getElementsByTagName("button")[1]
+            .addEventListener("click", getHandler);
+        }
+        function clickHandler(){
+            window.user = document.getElementById("ti").value;
+        }
+        function getHandler(){
+            console.log("User is : ", window.user);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="ti">
+    <button>Store User</button>
+    <hr>
+    <button>Get User Name</button>
+</body>
+</html>

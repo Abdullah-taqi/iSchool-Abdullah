@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Animation</title>
+    <style>
+        canvas{
+            border: 1px solid grey;
+            display: block;
+            margin: auto;
+        }
+    </style>
+    <script>
+        addEventListener("load", init);
+        var can, ctx;
+        function init(){
+            can = document.getElementById("can");
+            can.width = 500;
+            can.height = 500;
+            ctx = can.getContext("2d");
+
+            ctx.beginPath();
+            ctx.moveTo(100,100);
+            ctx.lineTo(200,100);
+            ctx.lineTo(200,200);
+            ctx.lineTo(100,200);
+            ctx.lineTo(100,100);
+            ctx.closePath();
+            ctx.fill();
+
+            
+            ctx.beginPath();
+            ctx.moveTo(300,100);
+            ctx.lineTo(400,100);
+            ctx.lineTo(400,200);
+            ctx.lineTo(300,200);
+            ctx.lineTo(300,100);
+            ctx.closePath();
+            ctx.lineWidth =10;
+            ctx.lineCap = 'butt';
+            ctx.stroke();
+
+        };
+    </script>
+</head>
+<body>
+    <canvas id="can"></canvas>
+</body>
+</html>

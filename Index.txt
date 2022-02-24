@@ -1,0 +1,8 @@
+1. Hello World
+2. Form Inputs
+3. Validations
+4. Custom Validations
+5. Geo Location
+6. Storage Window
+7. Storage Local
+8. Canvas Fun

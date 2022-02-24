@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* Pseudo Class Selectors */
+        p:hover{
+            background-color: cyan;
+        }
+        a{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a:link{
+            background-color: cadetblue;
+            color: firebrick;
+            text-decoration: none;
+        }
+        a:visited{
+            background-color: palevioletred;
+            color: lemonchiffon;
+            text-decoration: none;
+        }
+        /* Pseudo Element Selectors */
+        p:first-letter{
+            font-size: 30px;
+            font-family: 'impact';
+        }
+        p:first-line{
+            background-color: coral;
+        }
+        li:after{
+            content: "";
+            background-color: crimson;
+            width: 50px;
+            height: 10px;
+            display: inline-block;
+        }
+        /* Dynamic Pseudo Class Selectors */
+        input:hover{
+            background-color: aqua;
+        }
+        input:focus{
+            background-color: coral;
+        }
+        input:active{
+            background-color: darkviolet;
+        }
+
+        /* lang Pseudo selector */
+        p:lang(en){
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        p:lang(fr){
+            font-family: cursive;
+        }
+        /* Adjecent Sibling */
+        ul+p{
+            border: 10px dotted rgb(0, 0, 0);
+        }
+        
+       /*  General Sibling */
+        ul+p{
+            border: 10px dotted red;
+        }
+    </style>
+</head>
+<body>
+    <a>Dummy Link Tag</a>
+    <br>
+    <a href="http://ischoolconnect.com">New Unvisited Link Tag</a>
+    <br>
+    <a href="http://google.com">Visited Link Tag</a>
+    <br>
+    <a>Mouse Over Link Tag</a>
+   <p lang="en">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quasi, odit, sapiente aut eum placeat pariatur officiis omnis blanditiis animi expedita. Atque magnam itaque sit iure earum accusamus, cumque quas.
+   </p>
+   <p lang="fr">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quasi, odit, sapiente aut eum placeat pariatur officiis omnis blanditiis animi expedita. Atque magnam itaque sit iure earum accusamus, cumque quas.
+   </p>
+   <hr>
+   <input type="text">
+   <br>
+   <input type="text">
+   <br>
+   <input type="text">
+   <ul>
+       <li>List Item 1</li>
+       <li>List Item 2</li>
+       <li>List Item 3</li>
+       <li>List Item 4</li>
+       <li>List Item 5</li>
+   </ul>
+   <p>
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque veritatis, iste quae aliquam quam soluta, illo itaque delectus commodi magnam ipsa veniam impedit, nemo a recusandae architecto explicabo vitae doloribus.
+   </p>
+   <p>
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, quaerat reiciendis asperiores voluptatem enim est quo tempora neque nesciunt numquam molestias ducimus quasi, blanditiis quibusdam ipsam adipisci accusamus mollitia laudantium.
+   </p>
+   <p>
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quos officiis, repudiandae, impedit labore expedita fugiat quod enim tempore porro sit eaque sunt? Commodi suscipit sequi accusamus consequuntur quod labore?
+   </p>
+</body>
+</html>

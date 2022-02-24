@@ -1,0 +1,15 @@
+caniuse.com
+https://github.com/labfile/ischool/
+
+Data visualization
+http://raphaeljs.com/  SVG
+https://dmitrybaranovskiy.github.io/raphael/
+http://alteredqualia.com/canvasmol/
+Animated graphics
+http://www.canvasdemos.com/
+Web applications
+https://galactic.ink/sketchpad/ https://sketch.io/sketchpad/
+http://stars.chromeexperiments.com/
+
+
+phaser.io - game download n dev

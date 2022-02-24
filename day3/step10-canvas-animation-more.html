@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Animation</title>
+    <style>
+        canvas{
+            border: 1px solid grey;
+            display: block;
+            margin: auto;
+        }
+    </style>
+    <script>
+        addEventListener("load", init);
+        var can, ctx, boxX = 0, boxY= 0, boxD = 100;
+        function init(){
+            can = document.getElementById("can");
+            can.width = 500;
+            can.height = 500;
+            ctx = can.getContext("2d");
+            setInterval(animation,10);
+        };
+        function animation(){
+            // ctx.clearRect(0,0,500,500);
+            boxX = Math.round( Math.random() * 500 );
+            boxY = Math.round( Math.random() * 500 );
+            boxD = Math.round( Math.random() * 100 );
+            var red = Math.round( Math.random() * 255 );
+            var green = Math.round( Math.random() * 255 );
+            var blue = Math.round( Math.random() * 255 );
+            var alpha = Math.random();
+
+            // ctx.fillStyle = "rgba(255,0,0,0.5)";
+            ctx.fillStyle = "rgba("+red+","+green+","+blue+","+alpha+")";
+            ctx.fillRect(boxX,boxY,boxD,boxD);
+        };
+    </script>
+</head>
+<body>
+    <canvas id="can"></canvas>
+</body>
+</html>

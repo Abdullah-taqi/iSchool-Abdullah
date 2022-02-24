@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Attribute Selectors</title>
+    <style>
+        /* img{
+            border: 5px dashed crimson;
+        } */
+       /*  img[width = "95"]{
+            border: 5px dashed crimson;
+        } */
+        /* img[alt]{
+            border: 5px dashed crimson;
+        } */
+        /* img[alt ^= 'b']{
+            border: 5px dashed crimson;
+        } */
+        /* img[alt $= 'man']{
+            border: 5px dashed crimson;
+        } */
+        img[alt *= 'r']{
+            border: 5px dashed crimson;
+        }
+    </style>
+</head>
+<body>
+   <img width="100" src="images/ironman.jpg"        alt="ironman">
+   <img width="100" src="images/batman.jpg">
+   <img width="100" src="images/superman.jpg"       alt="superman">
+   <img width="100" src="images/ironman.jpg"   alt="superman">  
+   <img width="100" src="images/ironman.jpg"   alt="blackpanther">
+   <img width="100" src="images/ironman.jpg"     alt="blackwidow">
+   <img width="100" src="images/spiderman.jpg"      alt="spiderman">
+   <img width="100" src="images/supergirl.jpg"      alt="supergirl">
+   <img width="100" src="images/ironman.jpg"       alt="deadpool">
+   <img width="100" src="images/superman.jpg"       alt="superman">
+   <img width="95"  src="images/rajani.jpg"         alt="antman">
+   <img width="100" src="images/rajani.jpg"         alt="rajani">
+</body>
+</html>
