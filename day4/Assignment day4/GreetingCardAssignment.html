@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+    align-items: center;
+    background-color: #020b1d;
+    border-radius: 20px;
+    display: flex;
+    height: 500px;
+    justify-content: center;
+    margin-right: 4rem;
+    padding-left: 40px;
+    margin-left: 14rem;
+    margin-top: 3rem;
+    width: 900px;
+    
+  }
+
+       
+    </style>
+    <script>
+        // addEventListener("load",init);
+        // var newButton = document.getElementById("newbutton");
+        // newButton.addEventListener()
+        //document.getElementById("gBtn").createElement("canvas");
+        
+        var can, ctx;
+       
+       
+            function init(){
+            
+
+            name = document.getElementById("name");
+           
+
+            // Creating CANVAS
+            can = document.getElementsByTagName("canvas")[0];
+            can.width = 900;
+            can.height = 500;
+            ctx = can.getContext("2d");
+            ctx.font = "bold 36px Arial";
+            ctx.fillStyle = "white";
+            ctx.stroke();
+            setInterval(animation,100);
+            let text = message();
+            ctx.fillText("Congratulations",200,250);
+            ctx.fillText(text, 200, 300);
+
+
+
+
+            //star 1.1
+            ctx.moveTo(50,70);
+            ctx.lineTo(80,70);
+            ctx.lineTo(95,40);
+            ctx.lineTo(110,70);
+            ctx.lineTo(140,70);                                      
+            ctx.lineTo(110,90);
+            ctx.lineTo(120,125);
+            ctx.lineTo(90,100);
+            ctx.lineTo(60,125);
+            ctx.lineTo(75,90);
+            ctx.lineTo(50,70);
+            ctx.closePath();
+            
+            ctx.stroke();
+            ctx.fill();
+            /////////////////////////////////////////
+
+            //star 1.2
+            ctx.moveTo(250,20);
+            ctx.lineTo(280,20);
+            ctx.lineTo(295,-10);
+            ctx.lineTo(310,20);
+            ctx.lineTo(340,20);                                      
+            ctx.lineTo(310,40);
+            ctx.lineTo(320,65);
+            ctx.lineTo(290,50);
+            ctx.lineTo(260,85);
+            ctx.lineTo(275,40);
+            ctx.lineTo(250,20);
+            ctx.closePath();
+            
+            ctx.stroke();
+            ctx.fill();
+            //////////////////////////////////////////
+
+             //star 1.3
+            ctx.moveTo(550,70);
+            ctx.lineTo(580,70);
+            ctx.lineTo(595,40);
+            ctx.lineTo(610,70);
+            ctx.lineTo(640,70);                                      
+            ctx.lineTo(610,90);
+            ctx.lineTo(620,125);
+            ctx.lineTo(590,100);
+            ctx.lineTo(560,125);
+            ctx.lineTo(575,90);
+            ctx.lineTo(550,70);
+            ctx.closePath();
+            
+            ctx.stroke();
+            ctx.fill();
+
+            //mid star
+            
+            ctx.moveTo(0,270);
+            ctx.lineTo(30,270);
+            ctx.lineTo(45,240);
+            ctx.lineTo(60,270);
+            ctx.lineTo(90,270);                                      
+            ctx.lineTo(60,290);
+            ctx.lineTo(70,325);
+            ctx.lineTo(40,300);
+            ctx.lineTo(10,325);
+            ctx.lineTo(25,290);
+            ctx.lineTo(0,270);
+            ctx.closePath();
+            
+            ctx.stroke();
+            ctx.fill();
+            //////////////
+            //mid 2
+            ctx.moveTo(850,20);
+            ctx.lineTo(880,20);
+            ctx.lineTo(895,-10);
+            ctx.lineTo(910,20);
+            ctx.lineTo(940,20);                                      
+            ctx.lineTo(910,40);
+            ctx.lineTo(920,65);
+            ctx.lineTo(890,50);
+            ctx.lineTo(860,85);
+            ctx.lineTo(875,40);
+            ctx.lineTo(850,20);
+            ctx.closePath();
+            
+            ctx.stroke();
+            ctx.fill();
+            //////////////////////////////////////////
+            // star 2
+            ctx.moveTo(50,470);
+            ctx.lineTo(80,470);
+            ctx.lineTo(95,440);
+            ctx.lineTo(110,470);
+            ctx.lineTo(140,470);                                      
+            ctx.lineTo(110,490);
+            ctx.lineTo(120,525);
+            ctx.lineTo(90,500);
+            ctx.lineTo(60,525);
+            ctx.lineTo(75,490);
+            ctx.lineTo(50,470);
+            ctx.closePath();
+            
+            ctx.stroke();
+            ctx.fill();
+        }    
+            function animation(){
+            // ctx.clearRect(0,0,500,500);
+            cirX = Math.round( Math.random() * 900 );
+            cirY = Math.round( Math.random() * 500 );
+            rad = Math.round( Math.random() * 5 );
+            var red = Math.round( Math.random() * 255 );
+            var green = Math.round( Math.random() * 255 );
+            var blue = Math.round( Math.random() * 255 );
+            var alpha = Math.random();
+
+            ctx.fillStyle = "white";
+            
+            ctx.fill();
+            // ctx.fillRect(boxX,boxY,boxD,boxD);
+            ctx.beginPath();
+            ctx.arc(cirX,cirY,rad,0,2*Math.PI);
+            ctx.stroke();
+        };
+            
+        function message() {
+            var name = document.getElementById("name").value;
+                var userinput = document.getElementById("dob").value;  
+                var dob = new Date(userinput);  
+                if(userinput==null || userinput=='') {  
+                document.getElementById("message").innerHTML = "**Choose a date please!";    
+                return false;   
+                } else {  
+                
+                //calculate month difference from current date in time  
+                var month_diff = Date.now() - dob.getTime();  
+                
+                //convert the calculated difference in date format  
+                var age_dt = new Date(month_diff);   
+                
+                //extract year from date      
+                var year = age_dt.getUTCFullYear();  
+                
+                //now calculate the age of the user  
+                var age = Math.abs(year - 1970);  
+                
+                //display the calculated age  
+                let text = `${name}, today you turned ${age} `;
+                return text
+                  
+               
+        }  
+    }  
+    </script>
+</head>
+<body>
+    <form action="#">
+    <label for="name">Full name</label>   
+    <input type="text" id="name">
+    <label for="dob">DOB</label>
+    <input type="date" id="dob">
+    <button onclick="message()">Add name</button>
+    <button onclick="init()">Generate greeting card</button>
+    <h3 id="result"></h3>
+    </form>
+    <hr>
+    <canvas></canvas>
+
+</body>
+</html>

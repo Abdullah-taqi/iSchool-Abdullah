@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p:first-child {
+  background-color: yellow;
+}
+p:last-child{
+    color: blue;
+}
+p:nth-child(2) {
+  background: red;
+}
+p:nth-child(odd){
+    font-style: italic;
+}
+p:nth-child(even){
+    font-size: 25px;
+}
+p:nth-child(2n){
+    font-family: cursive;
+}
+span:nth-child(3n+4){
+    color: rgb(230, 91, 27);
+}
+span:nth-child(3n-4){
+    color: rgb(39, 27, 199);
+}
+span:nth-of-type(odd) {
+  background: rgb(255, 171, 171);
+}
+span:nth-last-child(2){
+    font-family: cursive;
+    color: rgb(255, 0, 221);
+    font-size: 25px;
+}
+span:nth-last-of-type(3) {
+  font-weight: 800;
+}
+h3:nth-last-of-type(3n) {
+  font-size: 20px;
+}
+h3:only-child{
+ background-color: rgb(58, 0, 0);
+ display: inline;
+ color: aliceblue;
+ padding: 5px;
+}
+h3:nth-child(3n){
+    font-family: cursive;
+    color: blueviolet;
+}
+h2:only-of-type {
+  background: red;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+input[type=text]:enabled {
+  background: #ffff00;
+}
+
+input[type=text]:disabled {
+  background: #dddddd;
+}
+::selection {
+  color: red;
+  background: yellow;
+}
+:root{
+    background-color: #dddddd;
+}
+p:empty {
+  width: 100px;
+  height: 20px;
+  background: #ff0000;
+}
+/* :not(p) {
+  font-size: 40px;
+} */
+/* div > p {
+  font-family: cursive;
+  color: #ffff00;
+} */
+input:checked {
+  height: 20px;
+  width: 20px;
+}
+</style>
+</head>
+<body>
+<hr>
+<h1>Selectors</h1>
+<hr>
+<p>Para 1 - A</p>
+<p>Para 1 - B</p>
+<p></p>
+
+<div>
+    <p>Para 2 - A</p>
+    <p>Para 2 - B</p>
+</div>
+<hr>
+<span>Para 1</span>
+<span>Para 2</span>
+<span>Para 3</span>
+<span>Para 4</span>
+<span>Para 5</span>
+<div>
+<span>Para 6</span>
+<span>Para 7</span>
+<span>Para 8</span>
+</div>
+<hr>
+<h3>Par 1</h3>
+<h3>Par 2</h3>
+<div><h3>Child</h3></div>
+<h3>Par 3</h3>
+<h3>Par 4</h3>
+<div><h2>Child no 2</h2></div>
+<div><h2>Child no 2</h2></div>
+<h3>Par 5</h3>
+<div>
+<h3>Par 6</h3>
+<h3>Par 7</h3>
+<h3>Par 8</h3>
+</div>
+<hr>
+<form action="">
+    First name: <input type="text" value="Hello"><br>
+    Last name: <input type="text" value="World"><br>
+    Country: <input type="text" disabled="disabled" value="Hello World">
+  </form>
+  <form action="">
+    <input type="radio" checked="checked" value="male" name="gender"> Male<br>
+    <input type="radio" value="female" name="gender"> Female<br>
+  </form>
+</body>
+</html>
