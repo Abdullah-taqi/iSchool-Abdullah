@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array methods</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        h2{
+            color: crimson;
+        }
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+       <h1>Array methods (JS) Part 2</h1>
+<hr>
+    <!--   arr.slice(startIndex [endIndex]) -->
+    <h2>The arr.slice(startIndex [endIndex]) method</h2>
+    <p>friends = ['Abdul', 'Raj', 'Kash', 'PP', 'Aman']</p>
+    <p id="element1"></p>
+    <script>
+        const friends = ['Abdul', 'Raj', 'Kash', 'PP', 'Aman'];
+        const friends2 = friends.slice(1, 5);
+        document.getElementById("element1").innerHTML = friends2;
+    </script>
+ <hr>   
+    <!--   arr.splice(startIndex, deleteCount, "new val") -->
+    <h2>The arr.splice(startIndex, deleteCount, "new val") method</h2>
+    <p>alphabets = ['A', 'B', 'C', 'D']</p>
+    <p id="element2"></p>
+    <script>
+        const alphabets = ['A', 'B', 'C', 'D'];
+        alphabets.splice(4, 0, 'E');
+        document.getElementById("element2").innerHTML = alphabets;
+    </script>
+  <hr>  
+    <!--arr.reverse() -->
+    <h2>The arr.reverse() method</h2>
+    <p>array = [1, 2, 3, 4]</p>
+    <p id="element3"></p>
+    <script>
+        const array = [1, 2, 3, 4];
+        const rev = array.reverse();
+        document.getElementById("element3").innerHTML = rev;
+    </script>
+<hr>
+    <!--   arr.sort() -->
+    <h2>The arr.sort() method</h2>
+    <p>alphabets2 = ['k', 'A', 'Z', 'P', 'O', 'B', 'C']</p>
+    <p id="element4"></p>
+    <script>
+        const alphabets2 = ['k', 'A', 'Z', 'P', 'O', 'B', 'C'];
+        alphabets2.sort();
+        document.getElementById("element4").innerHTML = alphabets2;
+    </script>
+<hr>
+    <!-- arr.toString() -->
+    <h2>The arr.toString() method</h2>
+    <p>The toString() method returns a string representing the specified array and its elements.</p>
+    <p>list = [A, 'h', 99, 'bga', 88]</p>
+    <p id="element5"></p>
+    <script>
+        const list = [A, 'h', 99, 'bga', 88];
+        list.toString();
+        document.getElementById("element5").innerHTML = list;
+    </script>
+<hr>
+    <!--   arr.toLocaleString() -->
+    <h2>The arr.toLocaleString() method</h2>
+    <p>arr = [88, 'zz', 'Pink']</p>
+    <p id="element6"></p>
+    <script>
+        const arr = [88, 'zz', 'Pink'];
+        arr.toString();
+        document.getElementById("element6").innerHTML = arr;
+    </script>
+</body>
+</html>

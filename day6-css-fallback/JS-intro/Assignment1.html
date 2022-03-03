@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array methods (JS)</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        h2{
+            color: crimson;
+        }
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Assignment - iSchoolConnect - Abdullah Taqi</h1>
+    <h1>Array methods (JS) Part 1</h1>
+<hr>
+    <!-- - arr.concat(arr2) -->
+    <h2>-> arr.concat(arr2) method</h2>
+    <p>arr1 = [[1, 4]]</p>
+    <p>arr2 = [2, [3]]</p>
+    <p id="element1"></p>
+    <script>
+        const arr1 = [[1, 4]];
+        const arr2 = [2, [3]];
+        const array = arr1.concat(arr2);
+        document.getElementById("element1").innerHTML = array;
+    </script>
+<hr>
+    <!-- - arr.join() -->
+    <h2>-> arr.join() method</h2>
+
+    <p>['Hello', 'World', 'Welcome', 'T', 'iSchoolConnect']</p>
+    <p id="element2"></p>
+    <script>
+        const elements = ['Hello', 'World', 'Welcome', 'T', 'iSchoolConnect'];
+        elements.join();
+        // elements.join('');
+        // elements.join('-');
+        document.getElementById("element2").innerHTML = elements;
+    </script>
+<hr>
+    <!-- - arr.pop() -->
+    <h2>-> arr.pop() method</h2>
+    <p>Fruits = ['Mango', 'Apple', 'Banana', 'Papaya', 'Litchi', 'Cherry']</p>
+    <p id="element3"></p>
+    <script>
+        const Fruits =['Mango', 'Apple', 'Banana', 'Papaya', 'Litchi', 'Cherry'];
+        Fruits.pop();
+        Fruits.pop();
+        document.getElementById("element3").innerHTML = Fruits;
+    </script>
+<hr>
+    <!-- - arr.push(value) -->
+    <h2>-> arr.push(value) method</h2>
+    <p>Colors =  ['Orange', 'Pink', 'Black']</p>
+    <p> otherColors = ['White', 'Grey']</p>
+    <p id="element4"></p>
+    <p id="element5"></p>
+    
+    
+    <script>
+        const otherColors = ['Orange', 'Pink', 'Black'];
+        otherColors.push('White');
+        otherColors.push('Grey');
+        document.getElementById("element5").innerHTML = otherColors;
+    </script>
+<hr>
+    <!-- - arr.unshift(value) -->
+    <h2>-> arr.unshift(value) method</h2>
+    <p>arr = ['A', 'B', 'C']</p>
+    <p id="element6"></p>
+    <script>
+        const arrr = ['A', 'B', 'C'];
+        arrr.unshift('D', 'E');
+        document.getElementById("element6").innerHTML = arrr;
+    </script>
+<hr>
+    <!-- arr.shift()  -->
+    <h2>-> arr.shift() method</h2>
+    <p>arr = ['A', 'B', 'C', 'D']</p>
+    <p id="element7"></p>
+    <script>
+        const arr3 = ['A', 'B', 'C', 'D'];
+        arr3.shift();
+        document.getElementById("element7").innerHTML = arr3;
+    </script>
+
+</body>
+
+</html>
