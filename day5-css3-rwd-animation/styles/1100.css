@@ -1,0 +1,6 @@
+article:nth-last-child(1){
+    background-color: tomato;
+}
+article:nth-last-child(2){
+    background-color: tomato;
+}

@@ -1,0 +1,84 @@
+@media screen and (max-width: 1600px) {
+    article {
+      width: 100px;
+      height: 100px;
+      background-color: #398ab9;
+      text-align: center;
+      font-family: "Trebuchet MS";
+      line-height: 100px;
+      font-weight: bold;
+      font-size: 30px;
+      margin: 5px;
+      float: left;
+      border: 5px solid #1c658c;
+    }
+  }
+  
+  @media screen and (max-width: 1400px) and (orientation: landscape)
+  {
+    article {
+      width: 100px;
+      height: 100px;
+      background-color: #C1F4C5;
+      text-align: center;
+      font-family: "Trebuchet MS";
+      line-height: 100px;
+      font-weight: bold;
+      font-size: 30px;
+      margin: 5px;
+      float: left;
+      border: 5px solid #65C18C;
+    }
+  }
+  
+  @media (max-width: 1200px) and (min-width: 1000px) {
+    article {
+      width: 100px;
+      height: 100px;
+      background-color: #F0D9FF;
+      text-align: center;
+      font-family: "Trebuchet MS";
+      line-height: 100px;
+      font-weight: bold;
+      font-size: 30px;
+      margin: 5px;
+      float: left;
+      border: 5px solid #BFA2DB;
+    }
+  }
+  @media only screen and (max-width: 1000px)
+  {
+    article {
+      width: 100px;
+      height: 100px;
+      background-color: #FFC4E1;
+      text-align: center;
+      font-family: "Trebuchet MS";
+      line-height: 100px;
+      font-weight: bold;
+      font-size: 30px;
+      margin: 5px;
+      float: left;
+      border: 5px solid #FF87CA;
+    }
+  }
+  
+  
+  /* Implementation of example 6 from https://www.w3.org/TR/css3-mediaqueries/
+  @media screen and (color), projection and (color) { … } */
+  @media only screen and not(hover), (max-width: 800px) and (orientation: portrait) 
+  {
+    article {
+      width: 100px;
+      height: 100px;
+      background-color: #ac4f7d;
+      text-align: center;
+      font-family: "Trebuchet MS";
+      line-height: 100px;
+      font-weight: bold;
+      font-size: 30px;
+      margin: 5px;
+      float: left;
+      border: 5px solid #763857;
+    }
+  }

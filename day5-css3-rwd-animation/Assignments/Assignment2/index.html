@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Assignment 2: Media Queries</title>
+  <link media="print" rel="stylesheet" href=".\print.css" />
+  <link rel="stylesheet" href=".\styles.css" />
+  <script>
+    addEventListener("load",function () {
+      setInterval(function(){
+        document.getElementById("log").innerHTML = innerWidth+"px";
+      },100)
+    })
+  </script>
+</head>
+<style>
+    
+article {
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgb(148, 28, 28);
+    text-align: center;
+    line-height: 100px;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 5px;
+    float: left;
+  }
+
+  
+
+</style>
+<body>
+  <h1 id="log"></h1>
+  <hr />
+  <section>
+    <article>1</article>
+    <article>2</article>
+    <article>3</article>
+    <article>4</article>
+    <article>5</article>
+    <article>6</article>
+    <article>7</article>
+    <article>8</article>
+    <article>9</article>
+    <article>10</article>
+  </section>
+</body>
+
+</html>
