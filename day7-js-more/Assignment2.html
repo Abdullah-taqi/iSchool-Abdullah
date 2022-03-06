@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 2</title>
+  </head>
+  <style>
+    body {
+      background-color: aliceblue;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      margin: 40px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .ques {
+      background-color: beige;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+    }
+  </style>
+  <body onload="load()">
+    <div class="ques">
+      <h1>iSchoolConnect - Assignment</h1>
+      <p>Q. create a function called fun1 and call it on body onload</p>
+      <p>
+        Q. create a function called fun2 and call it on window.addEventListener
+        load
+      </p>
+      <p>
+        Q. create a function called fun3 and call it on
+        document.addEventListener DOMContentLoaded
+      </p>
+      <!-- <p>Q. find out the order of execution</p> -->
+    </div>
+    <button id="myBtn">Check time</button>
+
+    <p id="demo"></p>
+
+    <p id="result"></p>
+
+    <script>
+      function load() {
+        alert("Page is loaded using onload");
+      }
+      document.getElementById("myBtn").addEventListener("click", displayDate);
+      function displayDate() {
+        document.getElementById("demo").innerHTML = Date();
+      }
+      function displayWindowSize(){
+    // Get width and height of the window excluding scrollbars
+    var w = document.documentElement.clientWidth;
+    var h = document.documentElement.clientHeight;
+    
+    // Display result inside a div element
+    document.getElementById("result").innerHTML = "Width: " + w + ", " + "Height: " + h;
+}
+    
+// Attaching the event listener function to window's resize event
+window.addEventListener("resize", displayWindowSize);
+
+// Calling the function for the first time
+displayWindowSize();
+    </script>
+  </body>
+</html>
