@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        addEventListener("load", function(){
+            // alert(document.body.childNodes.length);
+            // alert(document.body.children.length);
+            // document.getElementsByTagName("p")[1].innerText = "Selected";
+            // document.body.children[3].children[0].innerText = "Selected";
+            console.log(document.body.children[3].children[0].childNodes[0].nodeValue);
+            console.log(document.body.children[3].children[0].textContent);
+            console.log(document.body.children[3].children[0].innerText);
+            console.log(document.body.children[3].children[0].innerHTML);
+        });
+    </script>
+</head>
+<body>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia explicabo dignissimos est dolorem cumque laborum tempora id omnis laboriosam praesentium illum repellendus vero officiis consequatur, hic enim eligendi sequi voluptatum.
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis placeat sit corporis odit dicta nesciunt et saepe qui voluptate molestiae quia perferendis error omnis quaerat, neque aliquam? Dolore, numquam nihil.
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque quod numquam nemo voluptatibus consectetur magni ducimus reiciendis velit tenetur est, magnam officiis? Minima nemo a quas deserunt corrupti voluptas doloribus?
+    </p>
+    <ul>
+        <li>List <span>Item 1</span></li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+        <li>List Item 5</li>
+    </ul>
+</body>
+</html>

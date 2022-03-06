@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+    <style>
+        body{
+            margin: 50px;
+            border: 5px solid #00B4D8;
+            padding: 40px;
+        }
+    </style>
+    <script>
+        // implementing document.title
+        var x = document.title;
+        document.write("Title: " + x);
+    </script>
+</head>
+
+<body>
+    <hr><br>
+    <!-- form  -->
+    <form name="login">
+        <input name="fullname" type="name">
+        <input name="email" type="email">
+        <input name="password" type="password">
+        <button type="submit">Log in</button>
+    </form>
+    <br>
+    <hr>
+    <!-- images  -->
+    <img src="1.jpg" width="400px">
+    <img src="2.jpg" width="400px">
+    <p>URL of the images:</p>
+    <p id="source"></p>
+    <hr>
+    <!-- No of scripts  -->
+    <p>Number of scripts:</p>
+    <p id="scripts"></p>
+    <hr>
+    <!-- domain name  -->
+    <p>Domain name:</p>
+    <p id="domain"></p>
+    <hr>
+    <!-- No of links  -->
+    <p>
+        <a href="step32-loop-objects.html">Step 32</a><br>
+        <a href="step33-dom.html">Step 33</a><br>
+        <a href="step34-dom-creation.html">Step 34</a><br>
+        <a href="step35-events-fun.html">Step 35</a><br>
+        <a href="step36-add-remove-elements.html">Step 36</a><br>
+        <a href="step37-select-box-to-remove.html">Step 37</a><br>
+    </p>
+
+    <!-- Including Javascript  -->
+    <script>
+        // implementing document.body 
+        document.body.style.backgroundColor = "#d6f4fa";
+
+        // implementing document.forms[0]
+        var y = document.forms[0].reset();
+
+        // implementing document.forms["formName"]
+        var loginForm = document.forms["login"]
+        loginForm.elements.fullname.placeholder = "your name";
+        loginForm.elements.email.placeholder = "test@example.com";
+        loginForm.elements.password.placeholder = "password";
+
+        // implementing document.images
+        const myImages = document.images;
+        let text = "";
+        for (let i = 0; i < myImages.length; i++) {
+            text += myImages[i].src + "<br>";
+        }
+        document.getElementById("source").innerHTML = text;
+
+     
+
+        // implementing document.cookie 
+        alert(document.cookie);
+
+        // implementing document.domain
+        let myDomain = "https://www.google.com/";
+        document.getElementById("domain").innerHTML = myDomain;
+
+    </script>
+    </script>
+</body>
+
+</html>

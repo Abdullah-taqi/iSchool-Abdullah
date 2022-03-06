@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+
+</head>
+<style>
+    body{
+        background-color: rgb(201, 201, 201);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 20px;
+    }
+    .container{
+        background-color: aliceblue;
+        padding: 30px;
+        border-radius: 10px;
+        margin: 20px;
+    }
+    h2, h3{
+       text-align: center;
+    }
+    span{
+        color: brown;
+        font-size: 25px;
+    }
+</style>
+<body>
+    <h3>iSchoolConnect - Assignment 1</h3>
+    <h3>Abdullah Taqi</h3>
+
+    <div class="container">
+        <p>String Methods</p>
+        <p>My name is <span id="myName"></span></p>
+        <p>Character at 3 is :<span id="a"></span></p>
+        <p>Character at length-1 : <span id="b"></span></p>
+        <p>Substring(1,4) : <span id="c"></span></p>
+        <p>Slice(1,4) : <span id="d"></span></p>
+        <p>Slice(-3) : <span id="e"></span></p>
+        <p>Index of() :<span id="f"></span></p>
+        <p>Last Index Of ("1") : <span id="g"></span></p>
+        <p>Index Of ("a",3) : <span id="h"></span></p>
+        <p>Split(",") : <span id="i"></span></p>
+        <p>Replace : <span id="j"></span></p>
+        <p>Upper Body : <span id="k"></span></p>
+        <p>Lower Body : <span id="l"></span></p>
+    </div>
+
+    <script>
+        let name = "Abdullah Taqi";
+        let str = "My name is Abdullah Taqi, I am an Engineer"
+        document.getElementById("myName").innerHTML = name;
+        let a = name.charAt(0);
+        document.getElementById("a").innerHTML = a;
+        let b = name.charAt(name.length-1);
+        document.getElementById("b").innerHTML = b;
+        let c = name.substring(1,4);
+        document.getElementById("c").innerHTML = c;
+        let d = name.slice(3);
+        document.getElementById("d").innerHTML = d;
+        let e = name.slice(-3);
+        document.getElementById("e").innerHTML = e;
+        let f = name.indexOf("q");
+        document.getElementById("f").innerHTML = f;
+        let g = name.lastIndexOf("t");
+        document.getElementById("g").innerHTML = g;
+        let h = name.indexOf("a",3);
+        document.getElementById("h").innerHTML = h;
+        let i = str.split(",");
+        document.getElementById("i").innerHTML = i;
+        let j = str.replace("Engineer", "Entrepreneur");
+        document.getElementById("j").innerHTML = j;
+        let k = str.toUpperCase();
+        document.getElementById("k").innerHTML = k;
+        let l = str.toLowerCase();
+        document.getElementById("l").innerHTML = l;
+
+
+    </script>
+</body>
+</html>

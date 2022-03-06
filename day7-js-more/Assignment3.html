@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+</head>
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    button{
+        padding: 10px;
+        margin: 5px;
+        width: 100px;
+    }
+</style>
+
+<body>
+    <form name="docForm">
+        
+        <input name="fullname" type="name">
+        <input name="email" type="email">
+        <input name="password" type="password">
+        <button type="submit">Submit</button>
+    </form>
+    <p id="source"></p>
+    <hr>
+     
+    
+    <!-- No of scripts  -->
+    <p>Number of scripts: <span id="scripts"></span></p>
+    
+    <hr>
+    <!-- domain name  -->
+    <p>Current Domain is: <span id="domain"></span></p>
+    
+    <hr>
+    <!-- No of links  -->
+    <p>
+        <a href="https://www.google.co.in">Google</a><br>
+        <a href="https://www.facebook.com">Facebook</a><br>
+        <a href="https://www.amazon.com">Amazon</a><br>
+       
+    </p>
+    <h2>iSchoolConnect - Assignment</h2>
+    <button onclick="changeBg()" id="btn1">Change Background</button>
+    <button onclick="seeCookie()">Cookies</button>
+    <button onclick="changeTitle()">Change Title</button>
+
+    <script>
+      
+        // implementing document.cookie
+        function seeCookie(){
+            alert(document.cookie);
+        } 
+       // implementing document.scripts
+       var num = document.links.length;
+        document.write("Number of links: " + num);
+
+         
+        // Implementing document.body
+        function changeBg(){
+            if(document.body.style.backgroundColor != "grey"){
+            document.body.style.backgroundColor = "grey";
+            }else{
+                document.body.style.backgroundColor = "white"
+            }
+        };
+        function changeTitle(){
+        // Implementing document.title
+        document.title= "document.title";
+        alert("Title Changed");
+        }
+        // Implementing forms[0]
+        var docForm = document.forms["docForm"]
+        docForm.elements.fullname.placeholder = "Full name";
+        docForm.elements.email.placeholder = "ataqi@gmail.com";
+        docForm.elements.password.placeholder = "password";
+
+        // Implementing document.write
+            // implementing document.scripts
+        document.getElementById("scripts").innerHTML = document.scripts.length;
+        
+      
+
+        // Implementing document.domain
+        document.getElementById("domain").innerHTML = document.domain;
+
+
+        
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
