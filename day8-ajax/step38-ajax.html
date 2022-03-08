@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Fun</title>
+    <style>
+        #log{
+            width: 700px;
+            height: 200px;
+            background-color: silver;
+            color: darkslategray;
+            font-family: 'Trebuchet MS' ;
+            text-align: justify;
+            padding: 10px;
+            overflow: auto;
+            margin: auto;
+        }
+        button{
+            width: 300px;
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+    <script>
+        var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+                console.log("ReadyState Value : ",xhr.readyState);
+                if(xhr.status == 200 && xhr.readyState == 4){
+                    // console.log(xhr.responseText);
+                    document.getElementById("log").innerText = xhr.responseText;
+                }else{
+                    // console.log(xhr.readyState);
+                    document.getElementById("log").innerText += "XHR Status "+xhr.status+" | XHR Status Text : "+xhr.statusText+"\n";
+                }
+            };
+        document.addEventListener("DOMContentLoaded", function(){
+            document.getElementsByTagName("button")[0].onclick = function(){
+                xhr.open("get","data.txt",true);// 
+                xhr.send();
+            }
+        })
+    </script>
+</head>
+<body>
+    <button>Fetch Data</button>
+    <div id="log"></div>
+</body>
+</html>
