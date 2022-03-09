@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functional Improvements</title>
+    <script>
+        /* 
+        // default parameters
+        function adder(num1 = 0, num2 = 0){
+            return num1 + num2;
+        };
+       // console.log(adder(null,5));// ??? 
+        console.log(adder(5));// ???  
+        */
+
+        // Rest Parameters
+       /*  function adder(...nums){
+            let total = 0;
+            for(let i = 0; i < nums.length; i++){
+                total += nums[i];
+            }
+            return total;
+        };
+        console.log(adder(5));
+        console.log(adder(5,6));
+        console.log(adder(5,6,7));
+        console.log(adder(5,6,7,8));
+        console.log(adder(5,6,7,8,9));
+        console.log(adder(5,6,7,8,9,10)); */
+
+        // spread syntax
+        function adder(...nums){
+            let total = 0;
+            for(let i = 0; i < nums.length; i++){
+                total += nums[i];
+            }
+            return total;
+        };
+
+        var arr = [5,6,7,8,9];
+
+        // console.log(adder(arr[0], arr[1], arr[2], arr[3], arr[4]));
+        console.log(adder(...arr));
+        // console.log(...arr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

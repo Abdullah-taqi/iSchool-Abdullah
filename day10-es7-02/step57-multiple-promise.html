@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         let asyncCall1 = function(){
+             return new Promise(function(resolve, reject ){
+                        setTimeout(function(){
+                            if(true){
+                                resolve("Response from Async Call 1");
+                            }else{
+                                reject("Reject message from Async Call 1");
+                            }
+                        },3000)
+                    })
+         };
+         let asyncCall2 = function(){
+             return new Promise(function(resolve, reject ){
+                        setTimeout(function(){
+                            if(true){
+                                resolve("Response from Async Call 2");
+                            }else{
+                                reject("Reject message from Async Call 2");
+                            }
+                        },2000)
+                    })
+         };
+         let asyncCall3 = function(){
+             return new Promise(function(resolve, reject ){
+                        setTimeout(function(){
+                            if(false){
+                                resolve("Response from Async Call 3");
+                            }else{
+                                reject("Reject message from Async Call 3");
+                            }
+                        },1000)
+                    })
+         };
+
+         // Promise.all
+         /*          
+         Promise
+         .all([asyncCall1(), asyncCall2(), asyncCall3()])
+         .then((res)=>console.log(res))
+         .catch((error)=>console.log(error))
+         .finally(()=>console.log("All Promises are complete")) 
+         */
+
+         // Promise.any
+         /*  
+         Promise
+         .any([asyncCall1(), asyncCall2(), asyncCall3()])
+         .then((res)=>console.log(res))
+         .catch((error)=>console.log(error))
+         .finally(()=>console.log("One Promises is complete")) 
+         */
+        
+        // Promise.race
+         Promise
+         .race([asyncCall1(), asyncCall2(), asyncCall3()])
+         .then((res)=>console.log(res))
+         .catch((error)=>console.log(error))
+         .finally(()=>console.log("Promises race is complete")) 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
