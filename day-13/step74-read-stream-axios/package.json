@@ -1,0 +1,21 @@
+{
+  "name": "step-72-reading-files",
+  "version": "1.0.0",
+  "description": "This is a module to read external files and store locally.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "page",
+    "reader",
+    "store",
+    "external",
+    "pages"
+  ],
+  "author": "abdullah",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1"
+  }
+}
