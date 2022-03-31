@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/decorator.js"></script>
+    <!-- <script>
+        let commanman1 = { //object
+            title : "Bruce" //title property
+        };
+
+        let commanman2 = { //object
+            title : "Peter" //title property
+        };
+        
+
+        //  --------  returning an object  --------
+        /*
+        function addPower(num){ // This outer function will take the value as num and store it into a closure and passes it to the inner function.
+            return function(person){ //This return function and the num function are sibling as they both have the same lexical scope.
+                return {        //returning an object
+                    title : person.title,
+                    power : num
+                }
+            }
+        };
+
+        // let hero = addPower(9); //hero is a function
+        let hero1 = addPower(9)(commanman1); //hero is an object
+        console.log(hero1);
+
+        let hero2 = addPower(8)(commanman2); //hero is an object
+        console.log(hero2);
+        */
+
+
+        //  --------  returning a class  --------
+        function addPower(num){ // This outer function will take the value as num and store it into a closure and passes it to the inner function.
+            return function(person){ //This return function and the num function are sibling as they both have the same lexical scope.
+                return class {        //returning a class
+                    title = person.title;
+                    power = num;
+                }
+            }
+        };
+
+        let hero1 = addPower(9)(commanman1); //hero is an object
+        console.log(new hero1());
+
+        let hero2 = addPower(8)(commanman2); //hero is an object
+        console.log(new hero2());
+    </script> -->
+</head>
+<body>
+    
+</body>
+</html>
