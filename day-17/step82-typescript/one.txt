@@ -1,0 +1,30 @@
+// alert("Welcome to your life");
+
+
+//---------  Different Types  --------- 
+/*
+let message:string = "Welcome to your life";  //post colon data typing
+let count:number = 123;
+let show:boolean = true;
+let heroes:Array<string> = [''];
+let obj:object = {};
+*/
+
+
+//---------  Union Types  --------- 
+/*
+let message:(string | number | boolean) = "Welcome to your life"; // union types. Here it can be a string or a number
+    message = "new message"; //string
+    message = 1234; //number
+    message = false; //boolean
+*/
+
+
+//---------  Any Type  --------- 
+/*
+let message:any = "Welcome to your life"; 
+    message = 1234; //number
+    message = {}; //object
+*/
+
+// alert(message);

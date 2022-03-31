@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../node_modules/socket.io/client-dist/socket.io.js"></script>   <!-- added socket to client-side application -->
+    <script>
+        let username = "Guest";
+        let socket = io(); //we are creating a variable on the window object which then checks on the window if the websocket is available. If yes then it will use a websocket. If it is not available it will create a client-side or server-side polling
+        function serverMessageHandler(res){
+            document.querySelector(".container").innerHTML += `<p>${ res.username } : ${ res.message }</p>`
+        };
+        function loginHandler(){
+            username = document.getElementById("username").value;
+            document.getElementsByClassName("loginBox")[0].setAttribute("style","display : none");
+            document.getElementsByClassName("chatBox")[0].setAttribute("style","display : block");
+            document.querySelector("#welcome").innerText=username;
+            // socket.emit("clientMessage", document.getElementById("chatMessage").value);
+        };
+        function sendHandler(){
+            socket.emit("clientMessage",{"username" : username , "message" : document.getElementById("chatMessage").value});
+            document.getElementById("chatMessage").value = "";
+        };
+        document.addEventListener("DOMContentLoaded", function(){
+            document.getElementsByClassName("chatBox")[0].setAttribute("style","display : none");
+            socket.addEventListener("serverMessage",serverMessageHandler)
+            document.getElementById("logBtn").addEventListener("click", loginHandler);
+            document.querySelector("#welcome").innerText=username;
+            document.getElementById("sendBtn").addEventListener("click", sendHandler);
+        });
+        
+    </script>
+</head>
+<body>
+    <h1>Hello <span id="welcome"></span></h1>
+    <hr>
+    <div class="loginBox">
+        <input id="username">
+        <button id="logBtn">Login</button>
+    </div>
+    <div class="chatBox">
+        <textarea id="chatMessage"></textarea>
+        <button id="sendBtn">Send</button>
+    </div>
+    <div class="container"></div>
+    <hr>
+<!-- 
+    <input type="text" id="chatMessage">
+    <button id="sendBtn">Send Message</button> -->
+</body>
+</html>
