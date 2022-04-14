@@ -1,0 +1,45 @@
+<form action="#" name="myform" method="get">
+    <div class="mb-3"> 
+        <label for="username"  class="form-label">User Name</label>
+        <input id="username" class="form-control"  type="text">
+        <span class="form-text"></span>
+    </div>
+    <div class="mb-3"> 
+        <label for="userage"  class="form-label">User Age</label>
+        <input id="userage" class="form-control"  type="number">
+        <span class="form-text"></span>
+    </div>
+    <div class="mb-3"> 
+        <label for="usermail"  class="form-label">User eMail</label>
+        <input id="usermail" class="form-control"  type="text">
+        <span class="form-text"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>
+
+
+
+ <h2>Template Driven Form</h2>
+<form action="#" name="myform" method="get">
+    <div class="mb-3"> 
+        <label for="username"  class="form-label">User Name</label>
+        <input #uname="ngModel" name="uname" id="username" [(ngModel)]="user.name" class="form-control"  type="text">
+        <span class="form-text"></span>
+    </div>
+    <div class="mb-3"> 
+        <label for="userage"  class="form-label">User Age</label>
+        <input #uage="ngModel" name="uage" id="userage" [(ngModel)]="user.age" class="form-control"  type="number">
+        <span class="form-text"></span>
+    </div>
+    <div class="mb-3"> 
+        <label for="usermail"  class="form-label">User eMail</label>
+        <input #umail="ngModel" name="umail" id="usermail" [(ngModel)]="user.mail" class="form-control"  type="text">
+        <span class="form-text"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>
+<ul>
+    <li>User Name : {{ user.name }}</li>
+    <li>User Age : {{ user.age }}</li>
+    <li>User eMail : {{ user.mail }}</li>
+</ul>
